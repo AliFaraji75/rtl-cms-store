@@ -1,0 +1,12 @@
+.main{
+  padding-right: 260px;
+  flex:4;
+  margin: 0 20px;
+}
+@media(max-width:550px){
+  .main{
+    padding-right: 40px;
+    flex:4;
+    margin: 0 20px;
+  }
+}

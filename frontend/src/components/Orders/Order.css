@@ -1,0 +1,53 @@
+.product-table-btn{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: .8rem;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 5px 20px;
+}
+.cms-main {
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.cms-table {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.cms-table tr {
+    text-align: center;
+ 
+}
+
+.cms-table th, .cms-table td {
+    padding: 5px;
+}
+.order-table-btn-reject{
+
+    background-color: #ff4f4f;
+    color: var(--white);
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 7px;
+    margin-left: 0px;
+    padding: 5px 15px;
+    margin-right: 15px;
+  }
+  @media(max-width:550px){
+    .btn-groupe-mobile{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    
+    }
+    tr{
+      border-bottom: 1px solid rgb(192, 190, 190);
+    }
+    
+  }

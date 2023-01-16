@@ -1,0 +1,34 @@
+.products-main{
+    margin-top: 60px;
+}
+.products-title{
+    font-size: 2rem;
+}
+.add-products-form{
+    margin-top:30px ;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    border-radius: 20px;
+}
+@media(max-width:550px){
+    .add-products-form div{ 
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+    .add-products-submit{
+        width: 80%;
+    
+   margin: 0 auto;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+input{
+    padding-right: 0;
+    width: 90%;
+}
+}

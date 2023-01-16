@@ -1,0 +1,143 @@
+import React, { useState } from "react";
+import "./AddNewProduct.css";
+
+function AddNewProduct(props) {
+  const [newProductTitle, setNewProductTitle] = useState('' );
+  const [newProductPopularity, setNewProductPopularity] = useState('' );
+  const [newProductPrice, setNewProductPrice] = useState('' );
+  const [newProductImg, setNewProductImg] = useState('' );
+  const [newProductCount, setNewProductCount] = useState('' );
+  const [newProductSale, setNewProductSale] = useState('' );
+  const [newProductColors, setNewProductColors] = useState('' );
+  const addNewproductinfos ={
+    title: newProductTitle,
+    price: newProductPrice,
+    count: newProductCount,
+    img: newProductImg,
+    popularity: newProductPopularity,
+    sale: newProductSale,
+    colors: newProductColors
+  }
+
+  const addProduct = (event) => {
+    event.preventDefault();
+    fetch('http://localhost:3000/api/products',{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(addNewproductinfos)
+    })
+    .then(res=>res.json())
+    .then(data=>console.log("data",data))
+    .catch(e=>console.log("E", e))
+
+    console.log("newProduct", addNewproductinfos);
+  };
+
+  return (
+    <div className="products-main">
+      <h1 className="products-title"> افزودن محصول جدید</h1>
+      <form action="#" className="add-products-form">
+        <div className="add-products-form-wrap">
+          <div className="add-produts-form-group">
+            <input
+              value={newProductTitle}
+              name="title"
+              type="text"
+              placeholder="اسم محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductTitle(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductPrice}
+              name="price"
+              type="text"
+              placeholder="قیمت محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductPrice(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductCount}
+              name="count"
+              type="text"
+              placeholder="موجودی محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductCount(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductImg}
+              name="img"
+              type="text"
+              placeholder="ادرس عکس محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductImg(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductPopularity}
+              name="popularity"
+              type="text"
+              placeholder="میزان محبوبیت محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductPopularity(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductSale}
+              name="sale"
+              type="text"
+              placeholder="میزان فروش محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductSale(e.target.value)}
+            />
+          </div>
+          <div className="add-produts-form-group">
+            <input
+              value={newProductColors}
+              name="colors"
+              type="text"
+              placeholder="تعداد رنگ بندی محصول را وارد نمایید"
+              className="add-produts-input"
+              onChange={(e)=>setNewProductColors(e.target.value)}
+            />
+          </div>
+        </div>
+        <button className="add-products-submit" onClick={addProduct}>
+          ثبت محصول
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default AddNewProduct;
+
+
+/*
+const [newProduct, setNewProduct] = useState({
+    title: "",
+    price: "",
+    img: "",
+    count: "",
+    colors: "",
+    popularity: "",
+    sale: ""
+  });
+  const addpro ={
+    title: newProduct.title,
+    price: newProduct.price,
+    img: newProduct.img,
+    count: newProduct.count,
+    colors: newProduct.colors,
+    popularity: newProduct.popularity,
+    sale: newProduct.sale
+  }*/

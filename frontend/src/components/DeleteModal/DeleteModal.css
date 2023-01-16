@@ -1,0 +1,32 @@
+
+.delete-modal{
+    background-color: var(--white);
+    padding: 70px;
+    text-align: center;
+}
+.delete-modal h1{
+    font-size: 1.8rem;
+}
+.delete-modal-btns{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 30px;
+    margin-top: 40px;
+}
+.delete-btn{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 4px 20px;
+}
+.delete-modal-accept-btn{
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+}
+.delete-modal-reject-btn{
+    background-color: var(--white-70);
+    color:var(--blue);
+    border: none;
+    border-radius: 5px;
+}

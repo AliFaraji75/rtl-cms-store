@@ -1,0 +1,13 @@
+.details-modal{
+    padding: 70px;
+    background-color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+}
+.details-heading th {
+  text-align: center;
+  padding: 5px 50px;
+}
+.cms-table tr td {
+    padding-top: 15px;
+}

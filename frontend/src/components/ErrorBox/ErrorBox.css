@@ -1,0 +1,45 @@
+.error-box-msg{
+    font-size: 2rem;
+    background-color: #ff4f4f;
+    color: var(--white);
+    text-align: center;
+
+    margin-top: 20px;
+    padding: 20px;
+}
+.add-products-form-wrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr  ;
+    gap: 10px 15px;
+}
+.add-produts-form-group{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 90%;
+    background-color: #f4f4f4;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+.add-produts-input{
+    outline: none;
+    border: none;
+    background: unset;
+    padding: 8px 10px;
+    font-size: 1rem;
+}
+.add-products-submit{
+    font-size: 1.1rem;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+@media(max-width:550px){
+    .error-box-msg{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
